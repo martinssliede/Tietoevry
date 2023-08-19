@@ -1,4 +1,4 @@
-package com.tietoevery.releasev10.domain;
+package com.tietoevery.releasev10.book.domain;
 
 
 import jakarta.persistence.*;
@@ -14,7 +14,7 @@ import lombok.*;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id")
+    @Column(name = "id")
     private Long id;
     @NonNull
     @Column(name = "title")
@@ -29,10 +29,5 @@ public class Book {
         this.author = author;
     }
     public Book() {
-    }
-
-    public Boolean isEqualToBook(Book other) {
-        return getTitle().equals(other.title) &&
-                getAuthor().equals(other.author);
     }
 }

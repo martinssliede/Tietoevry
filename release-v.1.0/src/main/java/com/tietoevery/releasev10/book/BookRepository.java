@@ -1,7 +1,6 @@
 package com.tietoevery.releasev10.book;
 
 import com.tietoevery.releasev10.book.domain.Book;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -16,6 +15,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query
             ("SELECT b FROM Book b ORDER BY b.id DESC")
-    List<Book> listBooks(Pageable pageable);
-
+    List<Book> listBooks(Pageable page);
 }

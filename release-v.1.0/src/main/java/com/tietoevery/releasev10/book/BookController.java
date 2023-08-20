@@ -20,12 +20,8 @@ public class BookController {
     public Book addBook(@RequestBody Book book) {
         return bookService.addBook(book);
     }
-    @GetMapping("/admin/books/1")
-    public List<Book> firstPage() {
-        return bookService.firstPage();
-    }
-    @GetMapping("/admin/books/2")
-    public List<Book> secondPage() {
-        return bookService.secondPage();
+    @GetMapping("/admin/books")
+    public List<Book> listBooks(@RequestParam(defaultValue = "0") int pageNumber) {
+        return bookService.listBooks(pageNumber);
     }
 }

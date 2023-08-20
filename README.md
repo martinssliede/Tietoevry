@@ -4,4 +4,4 @@
 2.	Run java -jar release-v.1.0.jar command in terminal;
 
 Full descriprion on setting up application can be found here - 
-[Bookstore.com.docx](https://github.com/martinssliede/Tietoevry/files/12389209/Bookstore.com.docx)
+[Bookstore.com.docx](https://github.com/martinssliede/Tietoevry/files/12389245/Bookstore.com.docx)

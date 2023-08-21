@@ -15,5 +15,5 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     @Query
             ("SELECT b FROM Book b ORDER BY b.id DESC")
-    List<Book> listBooks(Pageable page);
+    List<Book> listBooks(Pageable pageable);
 }

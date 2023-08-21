@@ -25,9 +25,9 @@ public class BookService {
         }
     }
 
-    public List<Book> listBooks(int pageNumber) {
-        Pageable page = PageRequest.of(pageNumber, 50);
-        return bookRepository.listBooks(page);
+    public List<Book> listBooks(int page) {
+        Pageable pageable = PageRequest.of(page, 50);
+        return bookRepository.listBooks(pageable);
     }
 
     public boolean checkIfSameBook(String title, String author) {

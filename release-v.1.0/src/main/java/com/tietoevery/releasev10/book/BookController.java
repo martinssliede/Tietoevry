@@ -21,7 +21,7 @@ public class BookController {
         return bookService.addBook(book);
     }
     @GetMapping("/admin/books")
-    public List<Book> listBooks(@RequestParam(defaultValue = "0") int pageNumber) {
-        return bookService.listBooks(pageNumber);
+    public List<Book> listBooks(@RequestParam(defaultValue = "0") int page) {
+        return bookService.listBooks(page);
     }
 }
